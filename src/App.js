@@ -1,10 +1,12 @@
-import './App.css';
+import './App.scss';
 import Button from '@mui/material/Button';
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <header>
+        <Navbar />
         <h1>
           Baires Sneakers Ecommerce
         </h1>

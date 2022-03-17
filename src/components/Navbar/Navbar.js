@@ -1,0 +1,55 @@
+import React from 'react'
+import TextField from '@mui/material/TextField';
+import InputAdornment from '@mui/material/InputAdornment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
+
+import './navbar.scss';
+
+
+const Navbar = () => {
+    return(
+        <nav className="navbar">
+            <div className="navbar__logo">
+                <h1 tabIndex='0'>Baires Sneakers</h1>
+            </div>
+            <ul className="navbar__categories">
+                <li className="navbar__category" tabIndex='0'>
+                    <p>New entries</p>
+                </li>
+                <li className="navbar__category" tabIndex='0'>
+                    <p>Man</p>
+                </li>
+                <li className="navbar__category" tabIndex='0'>
+                    <p>Women</p>
+                </li>
+                <li className="navbar__category" tabIndex='0'>
+                    <p>Kids</p>
+                </li>
+                <li className="navbar__category" tabIndex='0'>
+                    <p>Sale</p>
+                </li>
+            </ul>
+            <div className="navbar__actions">
+                <TextField
+                    variant="outlined"
+                    size="small"
+                    id="input-with-icon-adornment"
+                    InputProps={{
+                        startAdornment: (
+                            <InputAdornment position="start">
+                                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            </InputAdornment>
+                        ),
+                    }}
+                />
+                <FontAwesomeIcon className="navbar__icon" icon={faHeart} tabIndex='0'/>
+                <FontAwesomeIcon className="navbar__icon" icon={faBagShopping} tabIndex='0'/>
+            </div>
+        </nav>
+    )
+}
+
+export default Navbar;
