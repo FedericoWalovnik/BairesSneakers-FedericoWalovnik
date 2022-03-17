@@ -1,0 +1,52 @@
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #fff;
+    color: black;
+    height: 5rem;
+    padding: 0 4rem;
+    align-items: center;
+    
+    &__categories {
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex;
+        list-style: none;
+        height: 100%;
+        justify-items: center;
+    }
+
+    &__category {
+        display: flex;
+        align-items: center;
+        padding: 0 .6rem;
+        cursor: pointer;
+        font-weight: 500;
+        border-bottom: 2px solid #fff;
+
+
+        &:hover, &:focus{
+            outline: none !important;
+            border-bottom: 2px solid #000;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        font-size: 1.6rem;
+        margin-left: 1rem;
+        border-radius: 100%;
+        padding: .4rem;
+        cursor: pointer;
+        
+        &:hover, &:focus {
+            outline: none !important;
+            background-color: rgb(214, 214, 214);
+        }
+    }
+}
