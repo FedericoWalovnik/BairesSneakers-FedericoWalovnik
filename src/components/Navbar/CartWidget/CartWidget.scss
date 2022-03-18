@@ -1,0 +1,36 @@
+.CartWidget {
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    &__icon{
+        font-size: 1.6rem;
+        margin-left: 1rem;
+        border-radius: 100%;
+        padding: .4rem;
+        cursor: pointer;
+        
+        &:hover, &:focus {
+            outline: none !important;
+            background-color: rgb(214, 214, 214);
+        }
+    }
+
+    &__counter-container {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: -5px;
+        background-color: rgb(218, 0, 0);
+        margin: 0;
+        color: #fff;
+        font-size: .8rem;
+        font-weight: 700;
+        padding: .5rem;
+        height: 19px;
+        width: 19px;
+        border-radius: 100%;
+    }
+}
