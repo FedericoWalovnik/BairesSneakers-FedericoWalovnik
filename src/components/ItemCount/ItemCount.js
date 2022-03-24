@@ -10,17 +10,20 @@ const ItemCount = ({ stockAvailable, addToCart }) => {
 
     const modifyItemsSelected = (operation) => {
         const newItemsSelected = operation === 'remove' ? itemsSelected - 1 : itemsSelected + 1
-        if (newItemsSelected >= 0) {
+        if (newItemsSelected >= 0 && newItemsSelected <= stockAvailable) {
             setItemsSelected(newItemsSelected)
         }
     }
 
     const handleAddToCart = () => {
-        if (itemsSelected <= stockAvailable && itemsSelected > 0) {
-            addToCart()
-        } else {
-            console.warn('There are not enough products to add to the cart!')
+        if(itemsSelected > 0){
+            addToCart(itemsSelected)
+            setItemsSelected(0)
         }
+    }
+
+    const isStockAvailable = () => {
+        return !stockAvailable > 0
     }
 
     return (
@@ -34,7 +37,7 @@ const ItemCount = ({ stockAvailable, addToCart }) => {
                     <FontAwesomeIcon icon={faPlus} />
                 </Button>
             </div>
-            <Button className="ItemCount__to-cart" variant="contained" onClick={handleAddToCart}>Add to cart</Button>
+            <Button className="ItemCount__to-cart" variant="contained" onClick={handleAddToCart} disabled={isStockAvailable()}>Add to cart</Button>
         </div>
     )
 }

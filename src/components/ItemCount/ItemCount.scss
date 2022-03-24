@@ -1,4 +1,5 @@
 .ItemCount {
+    margin-left: 10vw;
     display: flex;
     flex-direction: column;
     width: 200px;
@@ -14,5 +15,9 @@
     &__counter {
         display: flex;
         justify-content: space-between;
+    }
+
+    .Mui-disabled {
+        background-color: rgb(151, 151, 151) !important;
     }
 }
