@@ -5,7 +5,7 @@
     background-color: #fff;
     color: black;
     height: 5rem;
-    padding: 0 4rem;
+    padding: 0 10vw;
     align-items: center;
     
     &__categories {
@@ -38,9 +38,14 @@
     }
 
     &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 1.6rem;
         margin-left: 1rem;
         border-radius: 100%;
+        height: 42px;
+        width: 42px;
         padding: .4rem;
         cursor: pointer;
         

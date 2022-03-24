@@ -10,7 +10,6 @@ function App() {
         <h1>
           Baires Sneakers Ecommerce
         </h1>
-        <Button variant="outlined">Material UI Button</Button>
       </header>
     </div>
   );

@@ -45,8 +45,12 @@ const Navbar = () => {
                         ),
                     }}
                 />
-                <FontAwesomeIcon className="navbar__icon" icon={faHeart} tabIndex='0'/>
-                <FontAwesomeIcon className="navbar__icon" icon={faBagShopping} tabIndex='0'/>
+                <div className="navbar__icon" tabIndex="0">
+                    <FontAwesomeIcon icon={faHeart} />
+                </div>
+                <div className="navbar__icon" tabIndex="0">
+                    <CartWidget cartItems={1} />
+                </div>
             </div>
         </nav>
     )

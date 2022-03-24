@@ -1,0 +1,18 @@
+.ItemCount {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+
+    &__to-cart{
+        width: 100%;
+        background-color: black !important;
+        box-shadow: none !important;
+    }
+
+    &__counter {
+        display: flex;
+        justify-content: space-between;
+    }
+}
