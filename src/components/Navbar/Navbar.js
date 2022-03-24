@@ -1,16 +1,16 @@
 import React from 'react'
+import CartWidget from './CartWidget/CartWidget'
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import CartWidget from './CartWidget/CartWidget'
 
-import './navbar.scss';
+import './Navbar.scss';
 
 
 const Navbar = () => {
-    return(
+    return (
         <nav className="navbar">
             <div className="navbar__logo">
                 <h1 tabIndex='0'>Baires Sneakers</h1>
@@ -51,8 +51,8 @@ const Navbar = () => {
                 <div className="navbar__icon" tabIndex="0">
                     <CartWidget cartItems={1} />
                 </div>
-            </div>
-        </nav>
+            </div >
+        </nav >
     )
 }
 
