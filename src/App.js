@@ -7,7 +7,7 @@ function App() {
     <div>
       <header>
         <Navbar />
-        <ItemListContainer />
+        <ItemListContainer title={'Mens Lifestyle Shoes'} />
       </header>
     </div>
   );

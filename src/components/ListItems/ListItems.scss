@@ -1,0 +1,6 @@
+.ListItems {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
