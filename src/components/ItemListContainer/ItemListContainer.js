@@ -1,6 +1,8 @@
 import React from 'react'
-import ListProducts from '../ListProducts/ListProducts'
+import ListItems from '../ListItems/ListItems'
 import ItemCount from '../ItemCount/ItemCount'
+
+import './ItemListContainer.scss'
 
 const ItemListContainer = ({ title }) => {
     const addToCart = (num) => {
@@ -9,8 +11,8 @@ const ItemListContainer = ({ title }) => {
 
     return (
         <div className="ItemListContainer">
-            <h2>{title}</h2>
-            {/* <ListProducts /> */}
+            <h2 className="ItemListContainer__title">{title}</h2>
+            <ListItems />
             <ItemCount stockAvailable={5} addToCart={addToCart} />
         </div>
     )

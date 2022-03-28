@@ -4,9 +4,13 @@
     justify-content: space-between;
     background-color: #fff;
     color: black;
-    height: 5rem;
+    height: 7rem;
     padding: 0 10vw;
     align-items: center;
+
+    &__logo {
+        font-size: 1.5rem;
+    }
     
     &__categories {
         padding: 0 !important;
@@ -21,6 +25,7 @@
         display: flex;
         align-items: center;
         padding: 0 .6rem;
+        font-size: 1.3rem;
         cursor: pointer;
         font-weight: 500;
         border-bottom: 2px solid #fff;
@@ -41,7 +46,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.6rem;
+        font-size: 2.1rem;
         margin-left: 1rem;
         border-radius: 100%;
         height: 42px;
