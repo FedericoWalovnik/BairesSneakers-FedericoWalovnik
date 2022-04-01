@@ -17,7 +17,6 @@ const Item = ({ item, loading }) => {
                             }
                             <p className="Item__title">{item.title}</p>
                             <p className="Item__extra">Category {item.category}</p>
-                            <p className="Item__extra">{item.colors} Colors</p>
                             <p className="Item__price">${item.price}</p>
                         </div>
                     </span>

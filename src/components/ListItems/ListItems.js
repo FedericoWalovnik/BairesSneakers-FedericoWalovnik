@@ -97,7 +97,6 @@ const ListItem = () => {
         return items
     };
 
-
     const [products, setProducts] = useState([]);
 
     const getProducts = async () => {
