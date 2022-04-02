@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget/CartWidget'
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -13,7 +14,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar__logo">
-                <h1 tabIndex='0'>Baires Sneakers</h1>
+                <h1 tabIndex='0'><Link to={'/'}>Baires Sneakers</Link></h1>
             </div>
             <ul className="navbar__categories">
                 <li className="navbar__category" tabIndex='0'>
