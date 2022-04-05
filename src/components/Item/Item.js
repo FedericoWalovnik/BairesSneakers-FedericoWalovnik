@@ -4,7 +4,6 @@ import Skeleton from '@mui/material/Skeleton';
 import './Item.scss'
 
 const Item = ({ item, loading }) => {
-
     return (
         <div className="Item">
             {

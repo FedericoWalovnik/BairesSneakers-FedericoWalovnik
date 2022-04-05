@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget/CartWidget'
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -13,24 +14,34 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar__logo">
-                <h1 tabIndex='0'>Baires Sneakers</h1>
+                <h1 tabIndex='0'><Link to={'/'}>Baires Sneakers</Link></h1>
             </div>
             <ul className="navbar__categories">
-                <li className="navbar__category" tabIndex='0'>
-                    <p>New entries</p>
-                </li>
-                <li className="navbar__category" tabIndex='0'>
-                    <p>Man</p>
-                </li>
-                <li className="navbar__category" tabIndex='0'>
-                    <p>Women</p>
-                </li>
-                <li className="navbar__category" tabIndex='0'>
-                    <p>Kids</p>
-                </li>
-                <li className="navbar__category" tabIndex='0'>
-                    <p>Sale</p>
-                </li>
+                <Link to={'/category/new'} className="navbar__category">
+                    <li tabIndex='0'>
+                        <p>New entries</p>
+                    </li>
+                </Link>
+                <Link to={'/category/men'} className="navbar__category">
+                    <li tabIndex='0'>
+                        <p>Men</p>
+                    </li>
+                </Link>
+                <Link to={'/category/women'} className="navbar__category">
+                    <li tabIndex='0'>
+                        <p>Women</p>
+                    </li>
+                </Link>
+                <Link to={'/category/kids'} className="navbar__category">
+                    <li tabIndex='0'>
+                        <p>Kids</p>
+                    </li>
+                </Link>
+                <Link to={'/category/sale'} className="navbar__category">
+                    <li tabIndex='0'>
+                        <p>Sale</p>
+                    </li>
+                </Link>
             </ul>
             <div className="navbar__actions">
                 <TextField

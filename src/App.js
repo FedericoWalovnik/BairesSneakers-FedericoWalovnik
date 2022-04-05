@@ -1,21 +1,26 @@
 import './App.scss';
 import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
+
+import Home from './views/Home/Home'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './material-theme'
+import theme from './material-theme';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div>
-        <header>
-          <Navbar />
-          <ItemDetailContainer title={'Mens Lifestyle Shoes'} />
-
-          <ItemListContainer title={'Mens Lifestyle Shoes'} />
-        </header>
-      </div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer title={'Mens Lifestyle Shoes'} />} />
+          <Route path="/product/:productId" element={<ItemDetailContainer />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
