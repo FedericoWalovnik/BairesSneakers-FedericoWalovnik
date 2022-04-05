@@ -17,21 +17,31 @@ const Navbar = () => {
                 <h1 tabIndex='0'><Link to={'/'}>Baires Sneakers</Link></h1>
             </div>
             <ul className="navbar__categories">
-                <li className="navbar__category" tabIndex='0'>
-                    <p>New entries</p>
-                </li>
-                <li className="navbar__category" tabIndex='0'>
-                    <p>Man</p>
-                </li>
-                <li className="navbar__category" tabIndex='0'>
-                    <p>Women</p>
-                </li>
-                <li className="navbar__category" tabIndex='0'>
-                    <p>Kids</p>
-                </li>
-                <li className="navbar__category" tabIndex='0'>
-                    <p>Sale</p>
-                </li>
+                <Link to={'/category/new'} className="navbar__category">
+                    <li tabIndex='0'>
+                        <p>New entries</p>
+                    </li>
+                </Link>
+                <Link to={'/category/men'} className="navbar__category">
+                    <li tabIndex='0'>
+                        <p>Men</p>
+                    </li>
+                </Link>
+                <Link to={'/category/women'} className="navbar__category">
+                    <li tabIndex='0'>
+                        <p>Women</p>
+                    </li>
+                </Link>
+                <Link to={'/category/kids'} className="navbar__category">
+                    <li tabIndex='0'>
+                        <p>Kids</p>
+                    </li>
+                </Link>
+                <Link to={'/category/sale'} className="navbar__category">
+                    <li tabIndex='0'>
+                        <p>Sale</p>
+                    </li>
+                </Link>
             </ul>
             <div className="navbar__actions">
                 <TextField

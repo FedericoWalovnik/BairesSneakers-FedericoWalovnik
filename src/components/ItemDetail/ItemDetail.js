@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 import Skeleton from '@mui/material/Skeleton';
 import Button from '@mui/material/Button';
+import ItemCount from '../ItemCount/ItemCount'
 
 import './ItemDetail.scss';
 
 
 const ItemDetail = ({ details, loading }) => {
     const sizes = [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13]
+    const { productId } = useParams()
+
+    // const addToCart = (num) => {
+    //     console.log('agregado al cart', num)
+    // }
+
+    useEffect(() => {
+        console.log('recived product: ', productId)
+    }, []);
 
     return (
         <div className="ItemDetail__container">
@@ -43,6 +54,7 @@ const ItemDetail = ({ details, loading }) => {
                                 <Button variant="outlined" className="ItemDetail__button">Add to favorites</Button>
                             </div>
                             <p className="ItemDetail__description">{details.description}</p>
+                            {/* <ItemCount stockAvailable={5} addToCart={addToCart} /> */}
                         </div>
                     </div>
                     :

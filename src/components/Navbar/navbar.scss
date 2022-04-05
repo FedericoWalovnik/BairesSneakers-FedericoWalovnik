@@ -1,11 +1,13 @@
+@import '../../variables';
+
 .navbar {
     display: flex;
     width: 100%;
     justify-content: space-between;
     background-color: #fff;
     color: black;
-    height: 8rem;
-    padding: 0 10vw;
+    height: 7rem;
+    padding: 0 $side-margin;
     align-items: center;
 
     &__logo a{
@@ -32,11 +34,16 @@
         cursor: pointer;
         font-weight: 500;
         border-bottom: 2px solid #fff;
-
+        text-decoration: none !important;
+        color: #000;
 
         &:hover, &:focus{
             outline: none !important;
             border-bottom: 2px solid #000;
+        }
+
+        &--active p{
+            color: red;
         }
     }
 

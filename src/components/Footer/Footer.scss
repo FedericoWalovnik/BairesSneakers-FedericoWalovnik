@@ -1,0 +1,45 @@
+@import '../../variables';
+
+.Footer {
+    display: flex;
+    height:30rem;
+    background-color: #000;
+    color: #fff;
+    padding: 4rem $side-margin;
+
+    &__links {
+        flex-shrink: 0;
+        width: 20rem;
+    }
+
+    &__title {
+        font-family: 'Teko', sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+        list-style: none;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    &__item {
+        font-size: 1.2rem;
+        list-style: none;
+        margin-bottom: 1.5rem;
+        color: $grey-text;
+        cursor: pointer; 
+
+        &:hover, &:focus {
+            color: #fff;
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 100%;
+        font-size: 1rem;
+        color: $grey-text;
+
+    }
+}
