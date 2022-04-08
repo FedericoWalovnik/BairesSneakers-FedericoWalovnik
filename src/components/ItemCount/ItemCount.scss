@@ -1,19 +1,20 @@
 .ItemCount {
     margin-top: 3rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 100%;
     background-color: #fff;
     border-radius: 5px;
 
     &__to-cart{
         width: 100%;
-        background-color: black !important;
         box-shadow: none !important;
     }
 
     &__counter {
         display: flex;
+        align-items: center;
         justify-content: space-between;
     }
 

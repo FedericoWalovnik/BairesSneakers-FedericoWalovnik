@@ -79,8 +79,16 @@
         flex-direction: column;
     }
 
-    &__button:first-child {
+    & button {
         margin-bottom: 1rem;
+    }
+
+    & .MuiButton-contained {
+        width: 100%;
+    }
+    
+    & a {
+        text-decoration: none;
     }
 
     &__description {

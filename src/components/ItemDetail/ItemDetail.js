@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Skeleton from '@mui/material/Skeleton';
+import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import ItemCount from '../ItemCount/ItemCount'
 
@@ -10,10 +11,19 @@ import './ItemDetail.scss';
 const ItemDetail = ({ details, loading }) => {
     const sizes = [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13]
     const { productId } = useParams()
+    const [itemsSelected, setItemsSelected] = useState(0);
 
-    // const addToCart = (num) => {
-    //     console.log('agregado al cart', num)
-    // }
+
+    const addToCart = (num) => {
+        console.log('agregado al cart', num)
+    }
+
+    const modifyItemsSelected = (operation) => {
+        const newItemsSelected = operation === 'remove' ? itemsSelected - 1 : itemsSelected + 1
+        if (newItemsSelected >= 0 && newItemsSelected <= details.stock) {
+            setItemsSelected(newItemsSelected)
+        }
+    }
 
     useEffect(() => {
         console.log('recived product: ', productId)
@@ -50,11 +60,18 @@ const ItemDetail = ({ details, loading }) => {
                                 </div>
                             </div>
                             <div className="ItemDetail__actions">
-                                <Button variant="contained" className="ItemDetail__button">Add to shopping bag</Button>
+                                <ItemCount
+                                    addToCart={addToCart}
+                                    modifyItemsSelected={modifyItemsSelected}
+                                    itemsSelected={itemsSelected}
+                                />
+                                {
+                                    itemsSelected > 0 && <Link to={'/cart'}><Button variant="contained" className="ItemDetail__button">Add to shopping bag</Button></Link>
+                                }
+
                                 <Button variant="outlined" className="ItemDetail__button">Add to favorites</Button>
                             </div>
                             <p className="ItemDetail__description">{details.description}</p>
-                            {/* <ItemCount stockAvailable={5} addToCart={addToCart} /> */}
                         </div>
                     </div>
                     :

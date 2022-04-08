@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
             'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/60e26cc6-dc68-4888-8b3a-186cf576a047/calzado-space-hippie-01-14Tq8r.png',
             'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/8e842037-1e28-45f3-bc99-099d2fcb1e79/calzado-space-hippie-01-14Tq8r.png',
             'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/a0fa9eba-2fd5-4b12-bb26-a4c813618ad1/calzado-space-hippie-01-14Tq8r.png'],
-        stock: 1
+        stock: 4
     }
 
     const [product, setProduct] = useState([]);
