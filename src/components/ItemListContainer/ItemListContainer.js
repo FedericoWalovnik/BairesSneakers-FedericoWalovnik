@@ -8,11 +8,6 @@ import './ItemListContainer.scss'
 const ItemListContainer = ({ title }) => {
     const { categoryId } = useParams()
 
-    useEffect(() => {
-        console.log('recived category: ', categoryId)
-    }, [categoryId]);
-
-
     return (
         <div className="ItemListContainer">
             <ListItems categoryId={categoryId} />

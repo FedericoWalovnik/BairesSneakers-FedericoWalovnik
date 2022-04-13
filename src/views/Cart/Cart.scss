@@ -2,5 +2,59 @@
 
 .Cart {
     margin: 3vh $side-margin;
-    height: 55vh;
+    min-height: 55vh;
+    
+    &__title {
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        font-weight: 400;
+    }
+
+    & a {
+        text-decoration: none;
+    }
+
+    &__empty {
+        display: flex;
+        flex-direction: column;
+        
+        &-message {
+            font-size: 1.6rem;
+            margin: 2rem 0;
+            font-weight: 400;
+        }
+    }
+
+    &__not-empty {
+        display: flex;
+    }
+
+    &__list {
+        flex-grow: 1;
+    }
+    
+    &__summary {
+        flex: 0 0 30%;
+        padding-left: 3rem;
+
+        &-title {
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+    }
+
+    &__total {
+        font-size: 1.4rem;
+        display: flex; 
+        justify-content: space-between;
+        padding: 1rem 0;
+        margin-top: 2rem;
+        border: 1px solid $grey-borders;
+        border-right-color: transparent;
+        border-left-color: transparent;
+
+        &-title {
+            font-weight: 500;
+        }
+    }
 }
