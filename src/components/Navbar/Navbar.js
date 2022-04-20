@@ -20,27 +20,27 @@ const Navbar = () => {
                 <h1 tabIndex='0'><Link to={'/'}>Baires Sneakers</Link></h1>
             </div>
             <ul className="navbar__categories">
-                <Link to={'/category/new'} className="navbar__category">
+                <Link to={'/category/New'} className="navbar__category">
                     <li tabIndex='0'>
                         <p>New entries</p>
                     </li>
                 </Link>
-                <Link to={'/category/men'} className="navbar__category">
+                <Link to={'/category/Man'} className="navbar__category">
                     <li tabIndex='0'>
-                        <p>Men</p>
+                        <p>Man</p>
                     </li>
                 </Link>
-                <Link to={'/category/women'} className="navbar__category">
+                <Link to={'/category/Woman'} className="navbar__category">
                     <li tabIndex='0'>
-                        <p>Women</p>
+                        <p>Woman</p>
                     </li>
                 </Link>
-                <Link to={'/category/kids'} className="navbar__category">
+                <Link to={'/category/Kids'} className="navbar__category">
                     <li tabIndex='0'>
                         <p>Kids</p>
                     </li>
                 </Link>
-                <Link to={'/category/sale'} className="navbar__category">
+                <Link to={'/category/Sale'} className="navbar__category">
                     <li tabIndex='0'>
                         <p>Sale</p>
                     </li>
