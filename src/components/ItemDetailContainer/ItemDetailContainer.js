@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
+import { doc, getDoc, getFirestore } from 'firebase/firestore'
 
 import ItemDetail from '../ItemDetail/ItemDetail';
 
@@ -34,12 +35,19 @@ const ItemDetailContainer = () => {
     const [product, setProduct] = useState([]);
 
     const getProduct = async () => {
-        const promise = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(mockProduct)
-            }, 2000);
-        })
-        const result = await promise
+        // const promise = new Promise((resolve) => {
+        //     setTimeout(() => {
+        //         resolve(mockProduct)
+        //     }, 2000);
+        // })
+        // const result = await promise
+        // return result
+        const db = getFirestore()
+
+        const itemsRef = doc(db, "ItemsList", productId)
+        const itemRequest = await getDoc(itemsRef)
+        const result = itemRequest.exists() ? itemRequest.data() : ''
+
         return result
     }
 
@@ -56,9 +64,20 @@ const ItemDetailContainer = () => {
         setMockProducts()
     }, []);
 
+    useEffect(() => {
+        const db = getFirestore()
+
+        const itemsRef = doc(db, "ItemsList", productId)
+        getDoc(itemsRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                console.log(snapshot.data())
+            }
+        });
+    }, []);
+
     return (
         <div className="ItemDetailContainer">
-            {product.id ? <ItemDetail details={product} /> : <ItemDetail loading={true} />}
+            {product.image ? <ItemDetail details={product} /> : <ItemDetail loading={true} />}
         </div >
     )
 }

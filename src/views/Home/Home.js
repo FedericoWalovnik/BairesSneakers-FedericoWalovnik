@@ -7,7 +7,7 @@ const Home = () => {
         {
             image: 'https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_953,c_limit/965f33b5-ce1b-4a23-82b5-0c39c7f603df/nike-just-do-it.jpg',
             title: 'Style Your Air',
-            redirectLink: '/product/2',
+            redirectLink: '/product/L9fa4cIwlR1Ju8WP52Be',
             action: 'Shop'
         },
         {
@@ -32,11 +32,10 @@ const Home = () => {
         }
     ]
 
-
     const popularItems =
         [
             {
-                id: 0,
+                id: 'L9fa4cIwlR1Ju8WP52Be',
                 title: "Nike Air Force 1 '07",
                 price: 30,
                 category: 'Man',
@@ -45,7 +44,7 @@ const Home = () => {
                 stock: 1
             },
             {
-                id: 1,
+                id: 'PdcBvyp5XPWKPhoGfS6r',
                 title: "Nike Air Max 90 SE",
                 price: 30,
                 category: 'Man',

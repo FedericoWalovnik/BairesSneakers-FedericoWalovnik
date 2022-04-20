@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import Item from '../Item/Item'
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 
 import './ListItems.scss'
 
@@ -12,7 +13,7 @@ const ListItem = ({ categoryId }) => {
                 {
                     id: 0,
                     title: "Nike Air Force 1 '07",
-                    price: 30,
+                    price: 130,
                     category: 'Man',
                     bestSeller: false,
                     image: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/752efdf6-b2b7-47fc-b137-5a70b5dd9423/air-force-1-07-mens-shoes-L3SMQl.png',
@@ -415,19 +416,18 @@ const ListItem = ({ categoryId }) => {
 
 
     const getProducts = async () => {
-        const products = mockProducts[categoryId].items
-        setCategoryTitle(mockProducts[categoryId].title)
-        const promise = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(products)
-            }, 2000);
-        })
-        const result = await promise
-        return result
+        const db = getFirestore()
+        const itemsCollection = query(collection(db, "ItemsList"), where('category', '==', categoryId))
+
+        const productsRequest = await getDocs(itemsCollection)
+        const products = productsRequest.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+
+        return products
     }
 
     const setMockProducts = async () => {
         try {
+            setCategoryTitle(categoryId)
             const products = await getProducts()
             setProducts(products)
         } catch {
