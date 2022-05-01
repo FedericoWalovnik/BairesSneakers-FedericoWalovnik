@@ -1,0 +1,18 @@
+@import '../../variables';
+
+.PageNotFound {
+    margin: 3vh $side-margin;
+    min-height: 55vh;
+
+    h1 {
+        margin-bottom: 2rem;
+    }
+
+    & a {
+        text-decoration: none;
+    } 
+
+    &__empty-button { 
+        margin-top: 3rem;
+    }
+}

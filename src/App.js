@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer'
 
 import Home from './views/Home/Home'
 import Cart from './views/Cart/Cart'
+import PageNotFound from './views/PageNotFound/PageNotFound'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import { ThemeProvider } from '@mui/material/styles';
@@ -23,6 +24,7 @@ function App() {
             <Route path="/category/:categoryId" element={<ItemListContainer title={'Mens Lifestyle Shoes'} />} />
             <Route path="/product/:productId" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/notFound" element={<PageNotFound />} />
           </Routes>
           <Footer />
         </BrowserRouter>
