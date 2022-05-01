@@ -20,14 +20,14 @@ const Home = () => {
             image: 'https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_1824,c_limit/4a631c64-48cc-4a62-85c5-5e5c4ba92ad1/nike-just-do-it.jpg',
             title: 'Festival Favs',
             description: 'Bring the heat in fire fits ready to dance all day and night',
-            redirectLink: '/category/men',
+            redirectLink: '/category/Man',
             action: 'Shop'
         },
         {
             image: 'https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_1824,c_limit/a8176390-6e6e-441c-86e4-a449080f6e3a/nike-just-do-it.jpg',
             title: 'Get in on the Madness',
             description: 'Rep your school during the biggest tournament',
-            redirectLink: '/category/men',
+            redirectLink: '/category/Man',
             action: 'Shop'
         }
     ]
