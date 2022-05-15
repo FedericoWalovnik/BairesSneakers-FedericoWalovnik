@@ -1,0 +1,21 @@
+@import '../../variables';
+
+.FinishOrder {
+    margin: 3vh $side-margin;
+    min-height: 55vh;
+
+    &__title {
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    span {
+        font-weight: bold;
+    }
+    
+}

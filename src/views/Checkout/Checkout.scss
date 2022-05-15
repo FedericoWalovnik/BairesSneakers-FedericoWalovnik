@@ -1,0 +1,32 @@
+@import '../../variables';
+
+.Checkout {
+    margin: 3vh $side-margin;
+    min-height: 55vh;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin: 3rem 0;
+    }
+
+    &__email {
+        display: flex;
+        flex-direction: column;        
+        margin-bottom: 1rem;
+
+        & label {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        & input {
+            width: 50vw;
+            height: 30px;
+        }
+    }
+
+    &__error {
+        font-size: 1.4rem;
+    }
+}

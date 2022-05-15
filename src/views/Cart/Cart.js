@@ -1,12 +1,16 @@
-import './Cart.scss';
 import { Link } from 'react-router-dom';
 import { useCartContext } from "../../context/CartContext"
+import { useNavigate } from 'react-router-dom';
+
 
 import Button from '@mui/material/Button';
 import CartListItem from '../../components/CartListItem/CartListItem'
 
+import './Cart.scss';
+
 const Home = () => {
     const { cartList, totalPrice } = useCartContext()
+
 
     return (
         <div className="Cart">
@@ -28,6 +32,11 @@ const Home = () => {
                                     <CartListItem key={item.id} item={item} />
                                 )
                             })}
+                            <div>
+                                <Link to={'/checkout'}>
+                                    <Button variant="contained" className="Cart__empty-button">Finish order</Button>
+                                </Link>
+                            </div>
                         </div>
                         <div className="Cart__summary">
                             <h3 className="Cart__summary-title">Summary</h3>
@@ -38,7 +47,6 @@ const Home = () => {
                         </div>
                     </div>
                     )
-
             }
         </div>
     );
