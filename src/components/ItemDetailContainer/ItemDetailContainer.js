@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
         return result
     }
 
-    const setMockProducts = async () => {
+    const setProducts = async () => {
         try {
             const product = await getProduct()
             !product ? navigate("/notFound") : setProduct(product)
@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
     }
 
     useEffect(() => {
-        setMockProducts()
+        setProducts()
     }, []);
 
     return (
